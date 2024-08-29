@@ -12,16 +12,35 @@ With the Networked Pool System, you can optimize your multiplayer game’s perfo
 
 ## Table of Contents
 
-1. [Getting Started](#getting-started)
+1. [Pooling Overview](#pooling-overview)
+2. [Getting Started](#getting-started)
    - [Setting Up Pooled Actors](#1-setting-up-pooled-actors)
    - [Spawning Pooled Actors](#2-spawning-pooled-actors)
    - [Returning Objects](#3-returning-objects)
-2. [Basic Example](#basic-example)
+3. [Basic Example](#basic-example)
    - [Creating a Pool](#1-creating-a-pool)
    - [Adding Your Pool](#2-adding-your-pool)
    - [Pooled Actor Example](#3-pooled-actor-example)
    - [Checking if an Object is Free](#4-checking-if-an-object-is-free)
-3. [Support](#support)
+4. [Support](#support)
+
+## Pooling Overview
+
+Pooling is a technique used in software development, particularly in gaming, to improve performance by reusing objects or resources instead of creating new ones each time they are needed. Imagine you have a group of identical items, like enemies or projectiles in a game. Instead of creating and destroying these items repeatedly, which can be slow and use up a lot of computer resources, pooling keeps a collection of these items ready to be used and reused.
+
+### Why is Pooling Used?
+
+Pooling is used to make programs run faster and more efficiently. When a game constantly creates and destroys objects, it can slow down because each creation and destruction involves a lot of behind-the-scenes work for the computer. By keeping objects in a pool and reusing them, the game can avoid this costly process, leading to smoother and more responsive gameplay.
+
+### Advantages of Pooling
+
+1. **Improved Performance:** Pooling reduces the time and resources needed to create and destroy objects, making games run faster and more smoothly.
+   
+2. **Reduced Lag and Stutters:** By reusing objects, pooling helps prevent pauses or stutters in gameplay that can occur when creating or destroying objects.
+
+3. **Efficient Memory Use:** Pooling minimizes memory use by keeping a fixed number of objects that are reused rather than constantly allocating and freeing memory.
+
+Pooling is especially beneficial in high-performance applications like games, where maintaining a seamless and responsive experience is crucial for users.
 
 ## Getting Started
 
@@ -51,7 +70,8 @@ With the Networked Pool System, you can optimize your multiplayer game’s perfo
 
 - For spawning through Blueprint, K2 nodes and ability tasks are available for use:
 
-![Blueprint Nodes](https://github.com/user-attachments/assets/e3325cb3-b520-45fd-be74-7a4458dbb24e) ![Ability Tasks](https://github.com/user-attachments/assets/e03ef2e3-1881-45cd-ab0c-af2837c70f6f)
+![Blueprint Nodes](https://github.com/user-attachments/assets/e3325cb3-b520-45fd-be74-7a4458dbb24e) ![Ability Tasks](https://github.com/user-attachments/assets/e03ef2e3-1881-45cd-ab0c-af2837c70f6f)![image](https://github.com/user-attachments/assets/37bbf586-31f9-414f-b418-4bc1b0a0d118)
+
 
 ### 3. Returning Objects
 - Return objects to the pool when they are no longer needed by calling `UPoolSubsystem::ReturnToPool`.
