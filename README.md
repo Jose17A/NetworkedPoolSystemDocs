@@ -51,7 +51,7 @@ Pooling is especially beneficial in high-performance applications like games, wh
 ![Setup Example](https://github.com/user-attachments/assets/89514d1e-4abe-48e0-8de3-570cab08b527)
 
 - The system automatically resets trivially copyable variables and arrays containing trivially copyable types. You can exclude variables from this automatic reset by implementing `GetPropertyResetExcludeList`, which returns an FString array list.
-
+Note: If you have a large amount of actors, contantly spawning/despawning, it is recommended to set "Use Autmatic Property Reset" in your project settings to false, since reflection can be heavy if used frequently
 ![Exclude List Example](https://github.com/user-attachments/assets/6390176f-a2fb-44ac-9f30-1a4a46617ba2)
 
 **Trivially Copyable Variables List:**
